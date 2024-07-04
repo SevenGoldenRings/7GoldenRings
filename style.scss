@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'components';
+
+body {
+    background:$bgcolor;
+    background-image:$bgimg;
+    background-attachment: fixed;
+    background-blend-mode: color-dodge;
+}
+
+.test {
+    @include img(50px, 25px, 15px);
+}
+
+
+.test1 {
+    @include img(150px, 250px, 25px);
+    background-color:$red;
+}
+
+h1 {color:$bgcolor;}
+
+/*Map associant chaque classe spécifique à la variable de couleur*/
+$colorMap: (
+  vollheim: $vollheim,
+  arvandor: $arvandor,
+  xingAlda: $xingAlda,
+  cerah: $cerah,
+  alMalaq: $alMalaq,
+  claraNocte: $claraNocte,
+  ananda: $ananda,
+  nomades: $nomades,
+  admin: $admin,
+  nouvelArrivant: $nouvelArrivant,
+  inactif: $inactif
+);
+
+// Générer les styles pour chaque classe spécifique
+@each $class, $color in $colorMap {
+  .PNJ.#{$class} {
+    background-color:$W-primary;
+    padding:25px;
+    @include flex(center, center, 25px);
+
+    .titre {
+      color: $color;
+      font-size:45px;
+    }
+
+    img {
+        @include img(50px, 50px, 25px);
+        background-color: $color;
+    }
+  }
+}
