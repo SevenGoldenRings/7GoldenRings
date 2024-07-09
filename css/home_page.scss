@@ -1,0 +1,492 @@
+
+/******************************************************************
+
+HEADER
+
+******************************************************************/
+#header {
+    width: 1200px;
+    border-radius: $br-10;
+    overflow: clip;
+    margin: 50px auto 0;
+    scrollbar-color:rgba($black, 0.3) rgba($black, 0.3);
+}
+  
+.img_header {
+    @include bgImg(100%, 450px, center);
+    @include flex(center, center, 0);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.5);
+    }
+
+    .titre {
+        @include flex(flex-start, flex-end, 0);
+        @include flexPlus(column, nowrap);
+        position: relative;
+        z-index: 1;
+        color: $white;
+        height: 202px;
+    }
+
+    h2, h3, h4 {
+        @include headline;
+        position: relative;
+    }
+
+    h3, h4 {
+        text-shadow: $shadow;
+    }
+
+    h2 {
+        @include text ($pirata, 269px, 400, 200px);
+        filter: blur(1.5px);
+        opacity: 0.5;
+        text-align: center;
+        z-index: 2;
+    }
+
+    h3 {
+        @include text ($pirata, 140px, 400, 115px);
+        margin-top: -85px;
+        z-index: 3;
+    }
+
+    h4 {
+        @include text ($rubik, 16px, 500, 16px);
+    }
+}
+
+/******************************************************************
+
+NAVBAR
+
+******************************************************************/
+#navbar {
+    @include flex(center, space-between, 0);
+    background:$B-primary;
+    padding:25px 35px;
+
+    .identiteJoueur {
+        background:$B-secondary;
+        border-radius:$br-5;
+        padding:15px 30px;
+
+        /*quand le joueur est connecté*/
+        #pseudo-connecte {
+        color:$arvandor;
+        @include text ($pirata, 35px, 400, 28px);
+        }
+
+        a {
+        color:$white;
+        @include text ($rubik, 15px, 500, null);
+        }
+
+        /*quand le joueur est déconnecté*/
+        .logoutJoueur {
+        width:285px;
+        color:$white;
+        @include text ($inter, 15px, null, null);
+
+        a {color:$red;}
+        }
+    }
+  
+    .navigation {
+        @include flex(null, null, 15px);
+  
+      li {list-style-type: none;}
+      img {display: none;}
+  
+      a {
+        color:$white;
+        @include text ($rubik, 18px, 500, null);
+      }
+    }
+}
+
+/******************************************************************
+
+PAGE D'ACCUEIL
+
+******************************************************************/
+.PageAccueil {
+    background:$B-primary;
+    height: 539px;
+    transition: 0.5s;
+    overflow: hidden;
+    
+  
+    .menu {
+    background:$B-secondary;
+    @include flex(center, space-between, null);
+    padding:25px;
+  
+      .left, .right {@include flex(center, null, 15px)}
+    }
+  
+    /*boutons pour l'action de la PA*/
+    .btn_plierPA {opacity:0.5;transition:0.5s;}
+    .btn_plierPA:hover {opacity:1;}
+    .btn_plierPA_actif {opacity:1;background:$red;}
+    .btn_plierPA:before {content:'Plier la PA';}
+    .btn_plierPA_actif:before {content:'Déplier la PA';}
+  }
+  
+  .PageAccueil_ouvert {
+    height:88px;
+    transition:0.5s;
+  }
+  
+  /*PA - top sites*/
+  .top-sites {
+    @include flex(center, null, 10px);
+  
+    a {
+      background:$B-tertiary;
+      @include flex(center, center, null);
+      @include taille(38px, 38px);
+      @include text ($pirata, 22px, 400, null);
+      border-radius:$br-100;
+      color:$white;
+      transition:0.5s;
+    }
+  
+    a:hover {
+      background:$red;
+    }
+  
+    span {
+    @include text ($rubik, 13px, 500, 11px);
+      color:$white;
+      width:45px;
+    }
+}
+  
+/*Top partenaires*/
+#top-partenaires {
+    background:$B-tertiary;
+    @include flex(null, space-between, null);
+    padding:25px;
+}
+
+/******************************************************************
+
+CONTENU DE LA PA
+
+******************************************************************/
+.contenu_pa {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    height: 451px;
+
+    .contexte, .IDjoueur { grid-area: 1 / 1 / 2 / 2; }
+    .liensRapides { grid-area: 2 / 1 / 3 / 2; }
+    .derniersSujets { grid-area: 1 / 2 / 3 / 3; }
+    #Temporalite_Nouveautes { grid-area: 1 / 3 / 3 / 4; }
+}
+
+
+  
+  /***** LIENS RAPIDES *****/
+.liensRapides {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+width:495px;
+
+a:nth-child(1) { 
+grid-area: 1 / 1 / 3 / 2;
+flex-direction: column;
+}
+
+a:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+a:nth-child(3) { grid-area: 1 / 3 / 2 / 4; }
+a:nth-child(4) { grid-area: 2 / 2 / 3 / 3; }
+a:nth-child(5) { grid-area: 2 / 3 / 3 / 4; }
+
+
+a:not(:nth-child(1)) {
+    width:186px;
+}
+
+a {
+    @include flex(center, center, 10px);
+    background:$B-secondary;
+    color:$text-white;
+}
+
+a div:before {
+    @include text($goldenrings, 25px, 100!important, null);
+}
+
+.bestiaire:before {content: "\48";}
+.herbier:before {content: "\44";}
+.mineraux:before {content: "\41";}
+.artefacts:before {content: "\49";}
+.carte:before {content: "\46";}
+.FAQbtn:before {content: "\4c";}
+}
+  
+
+  
+  /******************************************************************
+  
+  QEEL
+  
+  ******************************************************************/
+  #QEEL {
+    background: var(--B-primary);
+  }
+  
+  
+  .parent {
+    display: grid;
+    align-items: end;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    background:pink;
+    width:1200px;
+    padding:25px;
+    position:relative;
+    overflow: clip;
+  
+    .groupes {
+      grid-area: 3 / 1 / 4 / 3;
+      background:red;
+      width:950px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      z-index:3;
+  
+      a {
+        padding:10px 15px;
+        width:230px;
+        border-radius: var(--br-5);
+        font-family:var(--rubik);
+        font-size:20px;
+        font-weight: 600;
+        color:var(--white);
+      }
+    }
+  
+    }
+    
+    .div1 { grid-area: 1 / 1 / 3 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+  
+  
+    .div2:before {content:'test';}
+  
+  .Statistiques {
+    grid-area: 1 / 3 / 4 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family:var(--rubik);
+    font-weight: 600;
+    font-size:18px;
+    z-index:3;
+  
+    #total, #qeel_posts {
+      color:var(--red);
+      font-size:42px;
+      line-height: 34px;}
+  
+  }
+  
+  .parent:after {
+    background-image: url('img/qeel.png');
+    height: 495px;
+    width: 450px;
+    content: '';
+    position: absolute;
+    top: -109px;
+    right: -110px;
+  }
+  
+  
+  .DernierInscrit { grid-area: 2 / 2 / 3 / 3;
+  
+  #avatar_dernier_membre img {
+    width:100px;
+    border-radius: var(--br-100);
+  }
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***** CONTEXTE *****/
+.contexte {
+    width:495px; display:none;
+}
+  
+/***** JOUEUR CONNECTE *****/
+.IDjoueur {
+    @include flex(center, null, 15px);
+    @include flexPlus(row, nowrap);
+
+    #avatar-connecte {
+        border-radius:$br-5;
+    }
+
+    img {
+        @include img(100px, 100px, 20px);
+    }
+
+    .liens {
+        @include flex(null, null, 10px);
+        @include flexPlus(null, wrap);
+        height: 140px;
+        
+        a:first-child {width:100%;}
+        a {
+            width:122px;
+            text-align: center;
+            font-size:14px;
+        }
+    }
+}
+
+/***** TEMPORALITÉ *****/
+.temporalite {
+    color:$text-white;
+    @include text ($inter, 14px, 400, null);
+
+    h2 {
+        @include text ($rubik, 22px, 600, null);
+        margin:0px;
+    }
+}
+
+/***** NOUVEAUTÉS *****/
+.nouveautes {
+    height: 280px;
+    margin-top:15px;
+
+    /*pour avoir un padding sur le scroll*/
+    .content_news {
+    @include flex(null, null, 10px);
+    @include flexPlus(column, null);
+    height:100%;
+    overflow:auto;
+    padding:0 15px 0 0;
+    scrollbar-width: thin;
+    }
+
+    /*bloc d'une nouveauté*/
+    .bloc {
+    @include flex(center, null, 15px);
+    background:$B-tertiary;
+    border-radius:$br-5;
+    padding:15px;
+
+        p {
+            @include text($inter, 13px, null, null);
+            @include paragraph;
+            color:$text-white;
+            height:auto;
+        }
+    }
+
+    /*la date (a) et le "voir + (span)"*/
+    .dateLien {
+        @include flex(null, null, 10px);
+        @include flexPlus(column, null);
+
+        span, a {
+            @include text($rubik, null, 500, null);
+            border-radius:$br-5;
+            color:$text-white;
+            padding: 5px;
+            text-align:center;
+            text-decoration: none;
+        }
+
+        span {
+            background:$red;
+            font-size: 12px;
+        }
+
+        a {
+            background:$B-primary;
+            font-size: 11px;
+        }
+    }
+}
+
+/***** DERNIERS SUJETS *****/
+.derniersSujets {
+    width:312.5px;
+    height:401px;
+}
+
+.content_SujetsRecents {
+    @include flex(null, null, 10px);
+    @include flexPlus(column, null);
+    scrollbar-width: thin;
+    height: 100%;
+    padding-right: 15px;
+    overflow: auto;
+
+    .bloc {
+        background:$B-tertiary;
+        border-radius:$br-5;
+        padding:15px;
+        display: grid;
+
+        a {color:$text-white;}
+
+        a.title {
+            @include text($rubik, 15px, 600, null);
+        }
+
+        .joueur span strong, span strong {
+            @include text($rubik, 14px, 600, null);
+        }
+
+        div {
+            @include text($inter, 13px, null, null);
+        }
+    }
+}

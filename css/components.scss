@@ -1,0 +1,194 @@
+// pour gérer la taille et le padding d'une image
+@mixin img($width, $height, $padding) {
+    width:$width;
+    height:$height;
+    padding:$padding;
+    border-radius:$br-5;
+    object-fit: cover;
+}
+
+// pour gérer la taille et le padding d'une image
+@mixin bgImg($width, $height, $position) {
+  width:$width;
+  height:$height;
+  background-position: $position;
+  border-radius:$br-5;
+  position: relative;
+  object-fit: cover;
+  background-size: cover;
+
+}
+
+// fonctions liées au flex
+@mixin flex($ac, $jc, $gap) {
+    display: flex;
+    align-content:$ac; // center, flex-start, flex-end, space-around, space-between, stretch
+    justify-content: $jc; // center, flex-start, flex-end, space-between, space-around, space-evenly
+    align-items: $ac; // center, flex-start, flex-end, stretch, baseline
+    gap: $gap;
+}
+
+// fonctions supplémentaires liées au flex
+@mixin flexPlus($fd, $fw) {
+  flex-direction:$fd; // row, column, row-reverse, column-reverse
+  flex-wrap:$fw; //nowrap, wrap
+}
+
+// pour "p"
+@mixin paragraph {
+    margin:0;
+    padding:0;
+}
+
+// pour gérer la marge des h1, h2, h3 et h4
+@mixin headline {
+    margin:0;
+}
+
+// pour la taille
+@mixin taille($height, $width) {
+  width:$width;
+  height:$height;
+}
+
+// pour le texte
+@mixin text ($family, $fontSize, $fontWeight, $lineHeight) {
+  font-family: $family;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+
+@mixin vollheim {
+  background:$vollheim;
+  
+}
+
+/* Gestion de l'apparence des boutons, champs et container*/
+
+// White, Black
+$variants: W, B;
+
+// Primary, Secondary, Tertiary
+$types: P, S, T;
+
+// Success, Information, Danger, Help
+$statuts: success, information, danger, help, Corange, Cred;
+
+$royaume: vollheim, arvandor, xingAlda, cerah, alMalaq, claraNocte, ananda, nomades, inactif;
+
+
+@mixin ComponentGeneral {
+  border:$stroke;
+  border-radius: $br-5;
+  @include text($inter, 16px, null, 18px);
+  @include flex(null, null, 5px);
+  @include flexPlus(column, null);
+}
+
+  @mixin ComponentP {
+    p {
+      height:100%;
+      @include paragraph;
+      overflow: auto;
+      scrollbar-width: thin;
+    }
+  }
+
+  @mixin ComponentSpan {
+    span {
+      font-family: $rubik;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+@each $variant in $variants {
+    @each $type in $types {
+        .containers-#{$variant}-#{$type}, 
+        .champ-#{$variant}-#{$type}, 
+        .btn-#{$variant}-#{$type} {
+        @include ComponentGeneral;
+        @include ComponentP; 
+        @include ComponentSpan;
+        color: if($variant == 'W', $text-black, $text-white);
+        
+        @if $variant == 'W' {
+            @if $type == 'P' {
+              background: $W-primary;
+            } 
+            
+            @else if $type == 'S' {
+              background: $W-secondary;
+            } 
+            @else if $type == 'T' {
+              background: $W-tertiary;
+            }
+
+        } @else if $variant == 'B' {
+            @if $type == 'P' {
+              background: $B-primary;
+            } 
+            
+            @else if $type == 'S' {
+              background: $B-secondary;
+            } 
+            
+            @else if $type == 'T' {
+              background: $B-tertiary;
+            }
+        }
+      }
+    }
+}
+
+/*gérer les containers et champs*/
+@each $variant in $variants {
+  @each $type in $types {
+    .containers-#{$variant}-#{$type}, 
+    .champ-#{$variant}-#{$type} {
+        padding:20px;
+      }
+  }
+}
+
+/*gérer les btns*/
+@each $variant in $variants {
+  @each $type in $types {
+      .btn-#{$variant}-#{$type} {
+        padding:10px;
+      }
+  }
+}
+
+
+@each $statut in $statuts {
+  .btn-#{$statut} {
+      @include ComponentGeneral;
+      color:$white;
+      // Ajoutez ici des styles spécifiques aux boutons
+
+    
+    @if $statut == 'success' {
+      background-color: $success;
+    } @else if $statut == 'information' {
+      background-color: $information;
+    } @else if $statut == 'danger' {
+      background-color: $danger;
+    } @else if $statut == 'help' {
+      background-color: $help;
+    } @else if $statut == 'Cred' {
+      background-color: $red;
+    } @else if $statut == 'Corange' {
+      background-color: $orange;
+    }
+  }
+}
+
+
+
+
+
+
+
