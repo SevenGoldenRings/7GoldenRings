@@ -1,17 +1,14 @@
 @import 'variables';
-@import 'components';
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pirata+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-
 body {
-    background:$bgcolor;
-    background-image:$bgimg;
-    background-attachment: fixed;
-    background-blend-mode: color-dodge;
+  background:$bgcolor;
+  background-image:$bgimg;
+  background-attachment: fixed;
+  background-blend-mode: color-dodge;
 }
 
 *:not(img) {box-sizing: border-box;}
+@import 'components';
 
 .test {
     @include img(50px, 25px, 15px);

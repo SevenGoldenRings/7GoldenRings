@@ -5,6 +5,17 @@ a {
   text-decoration: none;
 }
 
+body {
+  background: #686263;
+  background-image: url("img/background.png");
+  background-attachment: fixed;
+  background-blend-mode: color-dodge;
+}
+
+*:not(img) {
+  box-sizing: border-box;
+}
+
 /* Gestion de l'apparence des boutons, champs et container*/
 .containers-W-P,
 .champ-W-P,
@@ -324,17 +335,6 @@ a {
   flex-direction: column;
   color: #fff;
   background-color: #E4474D;
-}
-
-body {
-  background: #686263;
-  background-image: url("img/background.png");
-  background-attachment: fixed;
-  background-blend-mode: color-dodge;
-}
-
-*:not(img) {
-  box-sizing: border-box;
 }
 
 .test {
