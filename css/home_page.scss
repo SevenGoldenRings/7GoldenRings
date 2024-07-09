@@ -27,7 +27,7 @@ HEADER
     }
 
     .titre {
-        @include flex(flex-start, flex-end, 0);
+        @include flex(center, flex-end, 0);
         @include flexPlus(column, nowrap);
         position: relative;
         z-index: 1;
@@ -197,168 +197,9 @@ CONTENU DE LA PA
     #Temporalite_Nouveautes { grid-area: 1 / 3 / 3 / 4; }
 }
 
-
-  
-  /***** LIENS RAPIDES *****/
-.liensRapides {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 10px;
-grid-row-gap: 10px;
-width:495px;
-
-a:nth-child(1) { 
-grid-area: 1 / 1 / 3 / 2;
-flex-direction: column;
-}
-
-a:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
-a:nth-child(3) { grid-area: 1 / 3 / 2 / 4; }
-a:nth-child(4) { grid-area: 2 / 2 / 3 / 3; }
-a:nth-child(5) { grid-area: 2 / 3 / 3 / 4; }
-
-
-a:not(:nth-child(1)) {
-    width:186px;
-}
-
-a {
-    @include flex(center, center, 10px);
-    background:$B-secondary;
-    color:$text-white;
-}
-
-a div:before {
-    @include text($goldenrings, 25px, 100!important, null);
-}
-
-.bestiaire:before {content: "\48";}
-.herbier:before {content: "\44";}
-.mineraux:before {content: "\41";}
-.artefacts:before {content: "\49";}
-.carte:before {content: "\46";}
-.FAQbtn:before {content: "\4c";}
-}
-  
-
-  
-  /******************************************************************
-  
-  QEEL
-  
-  ******************************************************************/
-  #QEEL {
-    background: var(--B-primary);
-  }
-  
-  
-  .parent {
-    display: grid;
-    align-items: end;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 25px;
-    grid-row-gap: 25px;
-    background:pink;
-    width:1200px;
-    padding:25px;
-    position:relative;
-    overflow: clip;
-  
-    .groupes {
-      grid-area: 3 / 1 / 4 / 3;
-      background:red;
-      width:950px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      z-index:3;
-  
-      a {
-        padding:10px 15px;
-        width:230px;
-        border-radius: var(--br-5);
-        font-family:var(--rubik);
-        font-size:20px;
-        font-weight: 600;
-        color:var(--white);
-      }
-    }
-  
-    }
-    
-    .div1 { grid-area: 1 / 1 / 3 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-  
-  
-    .div2:before {content:'test';}
-  
-  .Statistiques {
-    grid-area: 1 / 3 / 4 / 4;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-family:var(--rubik);
-    font-weight: 600;
-    font-size:18px;
-    z-index:3;
-  
-    #total, #qeel_posts {
-      color:var(--red);
-      font-size:42px;
-      line-height: 34px;}
-  
-  }
-  
-  .parent:after {
-    background-image: url('img/qeel.png');
-    height: 495px;
-    width: 450px;
-    content: '';
-    position: absolute;
-    top: -109px;
-    right: -110px;
-  }
-  
-  
-  .DernierInscrit { grid-area: 2 / 2 / 3 / 3;
-  
-  #avatar_dernier_membre img {
-    width:100px;
-    border-radius: var(--br-100);
-  }
-  
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /***** CONTEXTE *****/
 .contexte {
-    width:495px; display:none;
+    width:495px;
 }
   
 /***** JOUEUR CONNECTE *****/
@@ -381,7 +222,7 @@ a div:before {
         
         a:first-child {width:100%;}
         a {
-            width:122px;
+            width:144px;
             text-align: center;
             font-size:14px;
         }
@@ -490,3 +331,223 @@ a div:before {
         }
     }
 }
+
+/***** LIENS RAPIDES *****/
+.liensRapides {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width:495px;
+
+    a:nth-child(1) { 
+    grid-area: 1 / 1 / 3 / 2;
+    flex-direction: column;
+    }
+
+    a:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+    a:nth-child(3) { grid-area: 1 / 3 / 2 / 4; }
+    a:nth-child(4) { grid-area: 2 / 2 / 3 / 3; }
+    a:nth-child(5) { grid-area: 2 / 3 / 3 / 4; }
+
+
+    a:not(:nth-child(1)) {
+        width:186px;
+    }
+
+    a {
+        @include flex(center, center, 10px);
+        @include flexPlus(row, null);
+        background:$B-secondary;
+        color:$text-white;
+    }
+
+    a div:before {
+        @include text($goldenrings, 25px, 100!important, null);
+    }
+
+    .bestiaire:before {content: "\48";}
+    .herbier:before {content: "\44";}
+    .mineraux:before {content: "\41";}
+    .artefacts:before {content: "\49";}
+    .carte:before {content: "\46";}
+    .FAQbtn:before {content: "\4c";}
+}
+
+  /******************************************************************
+  
+  QEEL
+  
+  ******************************************************************/
+  
+  #QEEL {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    background:$B-primary;
+    width:1200px;
+    height:447px;
+    padding:25px;
+    position:relative;
+    padding-top:60px;
+    overflow: clip;
+  
+
+    .groupes {
+        grid-area: 3 / 1 / 4 / 3;
+        width:950px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        z-index:3;
+    
+        a {
+          padding:10px 15px;
+          width:230px;
+          border-radius:$br-5;
+          @include text($rubik, 20px, 600, null);
+          color:$white;
+        }
+      }
+  
+    }
+    
+    .div1 {
+        grid-area: 1 / 1 / 3 / 2;
+        position: relative;
+        height:234px;
+        width:350px;
+        z-index: 3;
+      }
+      
+      .div2 {
+        grid-area: 1 / 2 / 2 / 3;
+        height:122px;
+        position:relative;
+        width:500px;
+        padding:25px;
+        margin-left:-119px;
+      }
+      
+      
+      .div1:before {
+        content: 'il y a peu de temps';
+        position: absolute;
+        top: -30px;
+        @include text($pirata, 48px, null, null);
+        color: $red;
+      }
+
+      .div2:before {
+        content: 'parmi nous';
+        position: absolute;
+        top: -30px;
+        @include text($pirata, 48px, null, null);
+        color: $red;
+      }
+      
+  
+.Statistiques {
+    @include flex(null, null, 15px);
+    @include flexPlus(column, null);
+    @include text($rubik, 18px, 600, null);
+    background:$B-secondary;
+    grid-area: 1 / 3 / 4 / 4;
+    z-index:3;
+    padding:20px;
+    border-radius:$br-5;
+    color:$white;
+    position: absolute;
+    bottom: 0;
+
+
+    #total, #qeel_posts {
+        color:$red;
+        @include text($rubik, 42px, null, 34px);
+    }
+}
+  
+  #QEEL:after {
+    background-image: url(/img/qeel.png);
+    background-position: 110px -110px;
+    background-repeat: no-repeat;
+    height: 447px;
+    width: 450px;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  
+  .DernierInscrit {
+    grid-area: 2 / 2 / 3 / 3;
+    position: relative;
+    height: 92px;
+    padding: 25px 100px 25px 25px;
+    margin-left: -119px;
+    width: 450px;
+    text-align: right;
+
+  
+    #avatar_dernier_membre {
+        position: absolute;
+        right: -100px;
+        bottom: 10px;
+    }
+
+  #avatar_dernier_membre img {
+    width:100px;
+    border-radius:$br-100;
+    background:$B-secondary;
+    padding:20px;
+    box-shadow:0px 0px 0px 20px $B-primary;
+
+  }
+  
+  }
+
+// Mixin to set the appropriate property based on the prefix
+@mixin set-property($property, $class-name) {
+    $suffix: str-slice($class-name, str-index($class-name, '-') + 1);
+    $color: map-get($colorMap, $suffix);
+    @if $color != null {
+      #{$property}: $color;
+    }
+  }
+  
+  // List of prefixes and their corresponding properties
+  $prefixes: (
+    C: color,
+    BG: background-color,
+    BC: border-color
+  );
+  
+  // Apply the mixin to all prefixes and keys in the map
+  @each $prefix, $property in $prefixes {
+    @each $key, $value in $colorMap {
+      .#{$prefix}-#{$key} {
+        @include set-property($property, "#{$prefix}-#{$key}");
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
