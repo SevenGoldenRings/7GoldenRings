@@ -333,6 +333,10 @@ body {
   background-blend-mode: color-dodge;
 }
 
+*:not(img) {
+  box-sizing: border-box;
+}
+
 .test {
   width: 50px;
   height: 25px;

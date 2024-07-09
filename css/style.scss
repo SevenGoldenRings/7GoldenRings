@@ -11,6 +11,8 @@ body {
     background-blend-mode: color-dodge;
 }
 
+*:not(img) {box-sizing: border-box;}
+
 .test {
     @include img(50px, 25px, 15px);
 }
