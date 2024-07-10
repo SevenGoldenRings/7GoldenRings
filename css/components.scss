@@ -12,11 +12,8 @@
   width:$width;
   height:$height;
   background-position: $position;
-  border-radius:$br-5;
   position: relative;
-  object-fit: cover;
   background-size: cover;
-
 }
 
 // fonctions liées au flex
@@ -185,10 +182,3 @@ $royaume: vollheim, arvandor, xingAlda, cerah, alMalaq, claraNocte, ananda, noma
     }
   }
 }
-
-
-
-
-
-
-

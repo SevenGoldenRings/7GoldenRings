@@ -1,5 +1,6 @@
 @import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pirata+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 body {
   background:$bgcolor;
   background-image:$bgimg;
@@ -8,6 +9,7 @@ body {
 }
 
 *:not(img) {box-sizing: border-box;}
+
 @import 'components';
 
 .test {
