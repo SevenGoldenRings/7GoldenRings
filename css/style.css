@@ -25,8 +25,210 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
+  flex-direction: column;
+  color: #27282B;
+}
+.containers-W-P p,
+.champ-W-P p,
+.btn-W-P p {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.containers-W-P span,
+.champ-W-P span,
+.btn-W-P span {
+  font-family: "rubik";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.containers-W-S,
+.champ-W-S,
+.btn-W-S {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: "inter";
+  font-size: 16px;
+  line-height: 18px;
+  flex-direction: column;
+  color: #27282B;
+}
+.containers-W-S p,
+.champ-W-S p,
+.btn-W-S p {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.containers-W-S span,
+.champ-W-S span,
+.btn-W-S span {
+  font-family: "rubik";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.containers-W-T,
+.champ-W-T,
+.btn-W-T {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: "inter";
+  font-size: 16px;
+  line-height: 18px;
+  flex-direction: column;
+  color: #27282B;
+}
+.containers-W-T p,
+.champ-W-T p,
+.btn-W-T p {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.containers-W-T span,
+.champ-W-T span,
+.btn-W-T span {
+  font-family: "rubik";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.containers-B-P,
+.champ-B-P,
+.btn-B-P {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: "inter";
+  font-size: 16px;
+  line-height: 18px;
+  flex-direction: column;
+  color: #CEDBE3;
+}
+.containers-B-P p,
+.champ-B-P p,
+.btn-B-P p {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.containers-B-P span,
+.champ-B-P span,
+.btn-B-P span {
+  font-family: "rubik";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.containers-B-S,
+.champ-B-S,
+.btn-B-S {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: "inter";
+  font-size: 16px;
+  line-height: 18px;
+  flex-direction: column;
+  color: #CEDBE3;
+}
+.containers-B-S p,
+.champ-B-S p,
+.btn-B-S p {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.containers-B-S span,
+.champ-B-S span,
+.btn-B-S span {
+  font-family: "rubik";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.containers-B-T,
+.champ-B-T,
+.btn-B-T {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: "inter";
+  font-size: 16px;
+  line-height: 18px;
+  flex-direction: column;
+  color: #CEDBE3;
+}
+.containers-B-T p,
+.champ-B-T p,
+.btn-B-T p {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.containers-B-T span,
+.champ-B-T span,
+.btn-B-T span {
+  font-family: "rubik";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.containers-W-P,
+.champ-W-P,
+.btn-W-P {
+  background: #D8E2E9;
+}
+
+.containers-W-S,
+.champ-W-S,
+.btn-W-S {
+  background: #E8EEF2;
+}
+
+.containers-W-T,
+.champ-W-T,
+.btn-W-T {
+  background: #FAFBFC;
+}
+
+.containers-B-P,
+.champ-B-P,
+.btn-B-P {
+  background: #1C1C1F;
+}
+
+.containers-B-S,
+.champ-B-S,
+.btn-B-S {
+  background: #151618;
+}
+
+.containers-B-T,
+.champ-B-T,
+.btn-B-T {
+  background: #101112;
+}
+
+.containers-W-P,
+.champ-W-P,
+.btn-W-P {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: "inter";
+  font-size: 16px;
+  line-height: 18px;
   flex-direction: column;
   color: #27282B;
   background: #D8E2E9;
@@ -56,8 +258,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #27282B;
   background: #E8EEF2;
@@ -87,8 +287,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #27282B;
   background: #FAFBFC;
@@ -118,8 +316,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #CEDBE3;
   background: #1C1C1F;
@@ -149,8 +345,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #CEDBE3;
   background: #151618;
@@ -180,8 +374,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #CEDBE3;
   background: #101112;
@@ -265,8 +457,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #fff;
   background-color: #03A65A;
@@ -278,8 +468,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #fff;
   background-color: #FC8621;
@@ -291,8 +479,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #fff;
   background-color: #DB3056;
@@ -304,8 +490,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #fff;
   background-color: #0070E0;
@@ -317,8 +501,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #fff;
   background-color: #CC6234;
@@ -330,8 +512,6 @@ body {
   font-family: "inter";
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  gap: 5px;
   flex-direction: column;
   color: #fff;
   background-color: #E4474D;

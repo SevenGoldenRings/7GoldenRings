@@ -80,7 +80,7 @@ $royaume: vollheim, arvandor, xingAlda, cerah, alMalaq, claraNocte, ananda, noma
   border:$stroke;
   border-radius: $br-5;
   @include text($inter, 16px, null, 18px);
-  @include flex(null, null, 5px);
+  //@include flex(null, null, 5px);
   @include flexPlus(column, null);
 }
 
@@ -100,6 +100,67 @@ $royaume: vollheim, arvandor, xingAlda, cerah, alMalaq, claraNocte, ananda, noma
       font-weight: 600;
     }
   }
+
+// Grouping common styles
+@each $variant in $variants {
+  @each $type in $types {
+    .containers-#{$variant}-#{$type},
+    .champ-#{$variant}-#{$type},
+    .btn-#{$variant}-#{$type} {
+      @include ComponentGeneral;
+      @include ComponentP;
+      @include ComponentSpan;
+      color: if($variant == 'W', $text-black, $text-white);
+    }
+  }
+}
+
+// Specific background styles
+@each $variant in $variants {
+  @each $type in $types {
+    @if $variant == 'W' {
+      @if $type == 'P' {
+        .containers-W-P,
+        .champ-W-P,
+        .btn-W-P {
+          background: $W-primary;
+        }
+      } @else if $type == 'S' {
+        .containers-W-S,
+        .champ-W-S,
+        .btn-W-S {
+          background: $W-secondary;
+        }
+      } @else if $type == 'T' {
+        .containers-W-T,
+        .champ-W-T,
+        .btn-W-T {
+          background: $W-tertiary;
+        }
+      }
+    } @else if $variant == 'B' {
+      @if $type == 'P' {
+        .containers-B-P,
+        .champ-B-P,
+        .btn-B-P {
+          background: $B-primary;
+        }
+      } @else if $type == 'S' {
+        .containers-B-S,
+        .champ-B-S,
+        .btn-B-S {
+          background: $B-secondary;
+        }
+      } @else if $type == 'T' {
+        .containers-B-T,
+        .champ-B-T,
+        .btn-B-T {
+          background: $B-tertiary;
+        }
+      }
+    }
+  }
+}
 
 @each $variant in $variants {
     @each $type in $types {
