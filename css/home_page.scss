@@ -387,6 +387,7 @@ CONTENU DE LA PA
     grid-template-columns:400px 530px 176px;
     gap: 20px 20px;
     background:$B-primary;
+    border-radius: $br-5;
     width:1200px;
     padding:25px;
     position:relative;
@@ -418,9 +419,8 @@ CONTENU DE LA PA
         @include scrollbar;
         width:100%;
 
-        p {
-          height:160px;
-        }
+        p {height:160px;}
+        a strong {font-size: 16px;}
       }
       
       .enligne {
@@ -430,9 +430,8 @@ CONTENU DE LA PA
         @include scrollbar;
         margin-right:100px;
 
-        p {
-          width: 310px;
-        }
+        p {width: 310px;}
+        a strong {font-size: 16px;}
       }
 
       .Connectes48h:before {

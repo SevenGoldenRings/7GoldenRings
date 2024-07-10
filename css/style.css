@@ -1209,6 +1209,7 @@ QEEL
   grid-template-columns: 400px 530px 176px;
   gap: 20px 20px;
   background: #1C1C1F;
+  border-radius: 5px;
   width: 1200px;
   padding: 25px;
   position: relative;
@@ -1244,6 +1245,9 @@ QEEL
 .Connectes48h p {
   height: 160px;
 }
+.Connectes48h a strong {
+  font-size: 16px;
+}
 
 .enligne {
   grid-area: 1/2/2/3;
@@ -1255,6 +1259,9 @@ QEEL
 }
 .enligne p {
   width: 310px;
+}
+.enligne a strong {
+  font-size: 16px;
 }
 
 .Connectes48h:before {
