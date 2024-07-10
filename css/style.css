@@ -1205,8 +1205,6 @@ QEEL
 ******************************************************************/
 #QEEL {
   display: grid;
-  /*grid-template-columns: repeat(3, 1fr);*/
-  /*grid-template-rows: repeat(3, 1fr);*/
   grid-template-rows: 122px 92px 100px;
   grid-template-columns: 400px 530px 176px;
   gap: 20px 20px;
@@ -1224,7 +1222,6 @@ QEEL
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  z-index: 3;
 }
 #QEEL .groupes a {
   padding: 10px 15px;
@@ -1285,6 +1282,7 @@ QEEL
   color: #fff;
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 .Statistiques #total, .Statistiques #qeel_posts {
   color: #E4474D;
