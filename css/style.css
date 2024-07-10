@@ -738,6 +738,7 @@ HEADER
   overflow: clip;
   margin: 50px auto 0;
   scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3);
+  scrollbar-width: thin;
 }
 
 .img_header {
@@ -1049,10 +1050,11 @@ CONTENU DE LA PA
   display: flex;
   gap: 10px;
   flex-direction: column;
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3);
+  scrollbar-width: thin;
   height: 100%;
   overflow: auto;
   padding: 0 15px 0 0;
-  scrollbar-width: thin;
 }
 .nouveautes .bloc {
   display: flex;
@@ -1104,6 +1106,7 @@ CONTENU DE LA PA
   display: flex;
   gap: 10px;
   flex-direction: column;
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3);
   scrollbar-width: thin;
   height: 100%;
   padding-right: 15px;
@@ -1211,7 +1214,6 @@ QEEL
   height: 447px;
   padding: 25px;
   position: relative;
-  padding-top: 60px;
   overflow: clip;
 }
 #QEEL br {
@@ -1235,39 +1237,42 @@ QEEL
   color: #fff;
 }
 
-.div1 {
+.Connectes48h {
   grid-area: 1/1/3/2;
   position: relative;
   height: 234px;
   width: 350px;
   z-index: 3;
+  overflow: clip;
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3);
+  scrollbar-width: thin;
+}
+.Connectes48h p {
+  height: 160px;
 }
 
-.div2 {
+.enligne {
   grid-area: 1/2/2/3;
   height: 122px;
   position: relative;
   width: 500px;
   padding: 25px;
   margin-left: -119px;
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3);
+  scrollbar-width: thin;
+}
+.enligne p {
+  width: 360px;
 }
 
-.div1:before {
+.Connectes48h:before {
   content: "il y a peu de temps";
   position: absolute;
-  top: -30px;
+  bottom: 7px;
+  right: 0px;
   font-family: "pirata one";
   font-size: 48px;
-  color: #E4474D;
-}
-
-.div2:before {
-  content: "parmi nous";
-  position: absolute;
-  top: -30px;
-  font-family: "pirata one";
-  font-size: 48px;
-  color: #E4474D;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .Statistiques {

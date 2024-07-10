@@ -9,7 +9,7 @@ HEADER
     border-radius: $br-10;
     overflow: clip;
     margin: 50px auto 0;
-    scrollbar-color:rgba($black, 0.3) rgba($black, 0.3);
+    @include scrollbar;
 }
   
 .img_header {
@@ -247,27 +247,27 @@ CONTENU DE LA PA
 
     /*pour avoir un padding sur le scroll*/
     .content_news {
-    @include flex(null, null, 10px);
-    @include flexPlus(column, null);
-    height:100%;
-    overflow:auto;
-    padding:0 15px 0 0;
-    scrollbar-width: thin;
+      @include flex(null, null, 10px);
+      @include flexPlus(column, null);
+      @include scrollbar;
+      height:100%;
+      overflow:auto;
+      padding:0 15px 0 0;
     }
 
     /*bloc d'une nouveauté*/
     .bloc {
-    @include flex(center, null, 15px);
-    background:$B-tertiary;
-    border-radius:$br-5;
-    padding:15px;
+      @include flex(center, null, 15px);
+      background:$B-tertiary;
+      border-radius:$br-5;
+      padding:15px;
 
-        p {
-            @include text($inter, 13px, null, null);
-            @include paragraph;
-            color:$text-white;
-            height:auto;
-        }
+      p {
+          @include text($inter, 13px, null, null);
+          @include paragraph;
+          color:$text-white;
+          height:auto;
+      }
     }
 
     /*la date (a) et le "voir + (span)"*/
@@ -305,7 +305,7 @@ CONTENU DE LA PA
 .content_SujetsRecents {
     @include flex(null, null, 10px);
     @include flexPlus(column, null);
-    scrollbar-width: thin;
+    @include scrollbar;
     height: 100%;
     padding-right: 15px;
     overflow: auto;
@@ -392,7 +392,6 @@ CONTENU DE LA PA
     height:447px;
     padding:25px;
     position:relative;
-    padding-top:60px;
     overflow: clip;
   
     br {display:none;}
@@ -416,38 +415,41 @@ CONTENU DE LA PA
   
     }
     
-    .div1 {
+    .Connectes48h {
         grid-area: 1 / 1 / 3 / 2;
         position: relative;
         height:234px;
         width:350px;
         z-index: 3;
+        overflow: clip;
+        @include scrollbar;
+
+        p {
+          height:160px;
+        }
       }
       
-      .div2 {
+      .enligne {
         grid-area: 1 / 2 / 2 / 3;
         height:122px;
         position:relative;
         width:500px;
         padding:25px;
         margin-left:-119px;
-      }
-      
-      
-      .div1:before {
-        content: 'il y a peu de temps';
-        position: absolute;
-        top: -30px;
-        @include text($pirata, 48px, null, null);
-        color: $red;
+        @include scrollbar;
+
+        p {
+          width: 360px;
+        }
       }
 
-      .div2:before {
-        content: 'parmi nous';
+      .Connectes48h:before {
+        content: 'il y a peu de temps';
         position: absolute;
-        top: -30px;
+        bottom:7px;
+        right:0px;
         @include text($pirata, 48px, null, null);
-        color: $red;
+        color: rgba($black, 0.3);
       }
       
   
