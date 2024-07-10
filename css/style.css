@@ -1034,6 +1034,9 @@ QEEL
   padding-top: 60px;
   overflow: clip;
 }
+#QEEL br {
+  display: none;
+}
 #QEEL .groupes {
   grid-area: 3/1/4/3;
   width: 950px;

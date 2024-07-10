@@ -10,95 +10,95 @@
 </head>
 <body>
 
-    <div id="QEEL">
-        <div class="containers-B-S div1">a</div>
-        <div class="containers-B-S div2">b</div>
-        <div class="containers-B-S right DernierInscrit">
-            Bienvenue <span id="newest_user">{NEWEST_USER}</span>
-            <span id="avatar_dernier_membre"><img src="/img/icon.jpg" alt=""></span>
+<div id="QEEL">
+    <div class="containers-B-S div1">a</div>
+    <div class="containers-B-S div2">b</div>
+    <div class="containers-B-S right DernierInscrit">
+        Bienvenue <span id="newest_user">{NEWEST_USER}</span>
+        <span id="avatar_dernier_membre"><img src="/img/icon.jpg" alt=""></span>
 
+    </div>
+    <div class="groupes">
+        <a class="BG-vollheim" href="https://7goldenrings.forumactif.com/g3-vollheim"><span id="grp-Vollheim">25</span> Vollheim</a>
+        <a class="BG-arvandor" href="https://7goldenrings.forumactif.com/g4-arvandor"><span id="grp-arvandor">10</span> Arvandor</a>
+        <a class="BG-xingAlda" href="https://7goldenrings.forumactif.com/g5-xing-alda"><span id="grp-xingAlda">25</span> Xing Alda</a>
+        <a class="BG-cerah" href="https://7goldenrings.forumactif.com/g6-cerah"><span id="grp-cerah">40</span> Cerah</a>
+        <a class="BG-alMalaq" href="https://7goldenrings.forumactif.com/g8-al-malaq"><span id="grp-alMalaq">8</span> Al’Malaq</a>
+        <a class="BG-claraNocte" href="https://7goldenrings.forumactif.com/g7-clara-nocte"><span id="grp-claraNocte">5</span> Clara Nocte</a>
+        <a class="BG-ananda" href="https://7goldenrings.forumactif.com/g9-ananda"><span id="grp-ananda">8</span> Ananda</a>
+        <a class="BG-nomades" href="https://7goldenrings.forumactif.com/g10-nomades"><span id="grp-nomades">5</span> Nomades</a>
+    </div>
+    <div class="containers-B-S Statistiques">
+        <div>
+            <div id="total">94</div>
+            <div class="QEEL_stats">joueurs</div>
         </div>
-        <div class="groupes">
-            <a class="BG-vollheim" href="https://7goldenrings.forumactif.com/g3-vollheim"><span id="grp-Vollheim">25</span> Vollheim</a>
-            <a class="BG-arvandor" href="https://7goldenrings.forumactif.com/g4-arvandor"><span id="grp-arvandor">10</span> Arvandor</a>
-            <a class="BG-xingAlda" href="https://7goldenrings.forumactif.com/g5-xing-alda"><span id="grp-xingAlda">25</span> Xing Alda</a>
-            <a class="BG-cerah" href="https://7goldenrings.forumactif.com/g6-cerah"><span id="grp-cerah">40</span> Cerah</a>
-            <a class="BG-alMalaq" href="https://7goldenrings.forumactif.com/g8-al-malaq"><span id="grp-alMalaq">8</span> Al’Malaq</a>
-            <a class="BG-claraNocte" href="https://7goldenrings.forumactif.com/g7-clara-nocte"><span id="grp-claraNocte">5</span> Clara Nocte</a>
-            <a class="BG-ananda" href="https://7goldenrings.forumactif.com/g9-ananda"><span id="grp-ananda">8</span> Ananda</a>
-            <a class="BG-nomades" href="https://7goldenrings.forumactif.com/g10-nomades"><span id="grp-nomades">5</span> Nomades</a>
-        </div>
-        <div class="containers-B-S Statistiques">
-            <div>
-                <div id="total">94</div>
-                <div class="QEEL_stats">joueurs</div>
-            </div>
 
-            <div>
-                <div id="qeel_posts">19436<!--{TOTAL_POSTS}--></div>
-                <div class="QEEL_stats">messages</div>
-            </div>
+        <div>
+            <div id="qeel_posts">19436<!--{TOTAL_POSTS}--></div>
+            <div class="QEEL_stats">messages</div>
         </div>
     </div>
+</div>
 </body>
 <!-- Changement de texte des informations du QEEL -->
 <script type="text/javascript">
-    $("#qeel_posts").html($("#qeel_posts").html().replace("Nos membres ont posté un total de", ""));
-    $("#qeel_posts").html($("#qeel_posts").html().replace("messages", ""));
-    $("#qeel_posts").html($("#qeel_posts").html().replace("message", ""));
+  $("#qeel_posts").html($("#qeel_posts").html().replace("Nos membres ont posté un total de", ""));
+  $("#qeel_posts").html($("#qeel_posts").html().replace("messages", ""));
+  $("#qeel_posts").html($("#qeel_posts").html().replace("message", ""));
+
+  $("#newest_user").html($("#newest_user").html().replace("L'utilisateur enregistré le plus récent est", ""));
   
-    $("#newest_user").html($("#newest_user").html().replace("L'utilisateur enregistré le plus récent est", ""));
-    
-    $("#online_users").html($("#online_users").html().replace("Utilisateurs enregistrés :", ""));
-    
-    $("#last_connected").html($("#last_connected").html().replace("Membres connectés au cours des 48 dernières heures :", ""));
-  </script>
-    
-  <script type="text/javascript">
-    $(function(){
-    $.get($("#newest_user a[href^='/u']")[0].href,function(d){
-    (a=$("div#field_id1 img",$(d))).length&&$("#avatar_dernier_membre").html(a);})
+  $("#online_users").html($("#online_users").html().replace("Utilisateurs enregistrés :", ""));
+  
+  $("#last_connected").html($("#last_connected").html().replace("Membres connectés au cours des 48 dernières heures :", ""));
+</script>
+  
+<script type="text/javascript">
+  $(function(){
+  $.get($("#newest_user a[href^='/u']")[0].href,function(d){
+  (a=$("div#field_id1 img",$(d))).length&&$("#avatar_dernier_membre").html(a);})
+  });
+</script>
+
+<script type="text/javascript">
+    $.get("https://7goldenrings.forumactif.com/groups", function (data) {
+        let VollheimNbreUser = parseInt($(data).find("#nb-users-g3").html()) - 1,
+            ArvandorNbreUser = parseInt($(data).find("#nb-users-g4").html()) - 1,
+            XingAldaNbreUser = parseInt($(data).find("#nb-users-g5").html()) - 1,
+            CerahNbreUser = parseInt($(data).find("#nb-users-g6").html()) - 1,
+            AlMalaqNbreUser = parseInt($(data).find("#nb-users-g8").html()) - 1,
+            ClaraNocteNbreUser = parseInt($(data).find("#nb-users-g7").html()) - 1,
+            AnandaNbreUser = parseInt($(data).find("#nb-users-g9").html()) - 1,
+            NomadesNbreUser = parseInt($(data).find("#nb-users-g10").html()) - 1;
+        let totalNbreUser = VollheimNbreUser + ArvandorNbreUser + XingAldaNbreUser + CerahNbreUser + AlMalaqNbreUser + ClaraNocteNbreUser + AnandaNbreUser + NomadesNbreUser;
+        $("#grp-Vollheim").html(VollheimNbreUser);
+        $("#grp-Arvandor").html(ArvandorNbreUser);
+        $("#grp-XingAlda").html(XingAldaNbreUser);
+        $("#grp-Cerah").html(CerahNbreUser);
+        $("#grp-AlMalaq").html(AlMalaqNbreUser);
+        $("#grp-ClaraNocte").html(ClaraNocteNbreUser);
+        $("#grp-Ananda").html(AnandaNbreUser);
+        $("#grp-Nomades").html(NomadesNbreUser);
+        $("#totalNbreUser").html(totalNbreUser);
+  
+  $("#total").html(totalNbreUser);
     });
-  </script>
-  
-  <script type="text/javascript">
-      $.get("https://7goldenrings.forumactif.com/groups", function (data) {
-          let VollheimNbreUser = parseInt($(data).find("#nb-users-g3").html()) - 1,
-              ArvandorNbreUser = parseInt($(data).find("#nb-users-g4").html()) - 1,
-              XingAldaNbreUser = parseInt($(data).find("#nb-users-g5").html()) - 1,
-              CerahNbreUser = parseInt($(data).find("#nb-users-g6").html()) - 1,
-              AlMalaqNbreUser = parseInt($(data).find("#nb-users-g8").html()) - 1,
-              ClaraNocteNbreUser = parseInt($(data).find("#nb-users-g7").html()) - 1,
-              AnandaNbreUser = parseInt($(data).find("#nb-users-g9").html()) - 1,
-              NomadesNbreUser = parseInt($(data).find("#nb-users-g10").html()) - 1;
-          let totalNbreUser = VollheimNbreUser + ArvandorNbreUser + XingAldaNbreUser + CerahNbreUser + AlMalaqNbreUser + ClaraNocteNbreUser + AnandaNbreUser + NomadesNbreUser;
-          $("#grp-Vollheim").html(VollheimNbreUser);
-          $("#grp-Arvandor").html(ArvandorNbreUser);
-          $("#grp-XingAlda").html(XingAldaNbreUser);
-          $("#grp-Cerah").html(CerahNbreUser);
-          $("#grp-AlMalaq").html(AlMalaqNbreUser);
-          $("#grp-ClaraNocte").html(ClaraNocteNbreUser);
-          $("#grp-Ananda").html(AnandaNbreUser);
-          $("#grp-Nomades").html(NomadesNbreUser);
-          $("#totalNbreUser").html(totalNbreUser);
-    
-    $("#total").html(totalNbreUser);
-      });
-  </script>
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const elementsToHide = document.querySelectorAll('div.QEEL_interieur a span[style="color:#A6A6A6"]');
-  
-      elementsToHide.forEach(function (element) {
-        element.parentElement.style.display = "none";
-        const nextSibling = element.parentElement.nextSibling;
-        if (nextSibling && nextSibling.nodeType === 3 && nextSibling.textContent.trim() === ",") {
-          nextSibling.remove();
-        }
-      });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const elementsToHide = document.querySelectorAll('div.QEEL_interieur a span[style="color:#A6A6A6"]');
+
+    elementsToHide.forEach(function (element) {
+      element.parentElement.style.display = "none";
+      const nextSibling = element.parentElement.nextSibling;
+      if (nextSibling && nextSibling.nodeType === 3 && nextSibling.textContent.trim() === ",") {
+        nextSibling.remove();
+      }
     });
-  </script>
+  });
+</script>
   
 
 
