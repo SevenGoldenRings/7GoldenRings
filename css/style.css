@@ -1205,13 +1205,13 @@ QEEL
 ******************************************************************/
 #QEEL {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  /*grid-template-columns: repeat(3, 1fr);*/
+  /*grid-template-rows: repeat(3, 1fr);*/
+  grid-template-rows: 122px 92px 100px;
+  grid-template-columns: 400px 530px 176px;
+  gap: 20px 20px;
   background: #1C1C1F;
   width: 1200px;
-  height: 447px;
   padding: 25px;
   position: relative;
   overflow: clip;
@@ -1221,7 +1221,6 @@ QEEL
 }
 #QEEL .groupes {
   grid-area: 3/1/4/3;
-  width: 950px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -1240,12 +1239,10 @@ QEEL
 .Connectes48h {
   grid-area: 1/1/3/2;
   position: relative;
-  height: 234px;
-  width: 350px;
-  z-index: 3;
   overflow: clip;
   scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3);
   scrollbar-width: thin;
+  width: 100%;
 }
 .Connectes48h p {
   height: 160px;
@@ -1253,16 +1250,14 @@ QEEL
 
 .enligne {
   grid-area: 1/2/2/3;
-  height: 122px;
   position: relative;
-  width: 500px;
   padding: 25px;
-  margin-left: -119px;
   scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3);
   scrollbar-width: thin;
+  margin-right: 100px;
 }
 .enligne p {
-  width: 360px;
+  width: 310px;
 }
 
 .Connectes48h:before {
@@ -1313,11 +1308,9 @@ QEEL
 .DernierInscrit {
   grid-area: 2/2/3/3;
   position: relative;
-  height: 92px;
   padding: 25px 100px 25px 25px;
-  margin-left: -119px;
-  width: 450px;
   text-align: right;
+  margin-right: 130px;
 }
 .DernierInscrit #avatar_dernier_membre {
   position: absolute;
