@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* goldenrings /
+@font-face {
+  font-family: "goldenrings";
+  src:url("https://sevengoldenrings.github.io/7GoldenRings/fontIconForum.eot");
+  src:url("https://sevengoldenrings.github.io/7GoldenRings/fontIconForum-fix.eot") format("embedded-opentype"),
+    url("https://sevengoldenrings.github.io/7GoldenRings/fontIconForumwoff.woff") format("woff"),
+    url("https://sevengoldenrings.github.io/7GoldenRings/fontIconForum.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "goldenrings" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="gr-"]:before,
+[class=" gr-"]:before {
+  font-family: "goldenrings" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gr-align-left:before {
+  content: "\61";
+}
+.gr-align-center:before {
+  content: "\62";
+}
+.gr-align-justify:before {
+  content: "\63";
+}
+.gr-align-right:before {
+  content: "\64";
+}
+.gr-bold:before {
+  content: "\67";
+}
+.gr-italic:before {
+  content: "\65";
+}
+.gr-underline:before {
+  content: "\66";
+}
+.gr-strikethrough:before {
+  content: "\68";
+}
+.gr-list-unordered:before {
+  content: "\69";
+}
+.gr-list-ordered:before {
+  content: "\6a";
+}
+.gr-font:before {
+  content: "\6b";
+}
+.gr-link:before {
+  content: "\6d";
+}
+.gr-youtube-play:before {
+  content: "\6c";
+}
+.gr-quote:before {
+  content: "\6e";
+}
+.gr-calendar-o:before {
+  content: "\6f";
+}
+.gr-clock-o:before {
+  content: "\70";
+}
+.gr-smile-o:before {
+  content: "\71";
+}
+.gr-code:before {
+  content: "\72";
+}
+.gr-quote-left:before {
+  content: "\73";
+}
+.gr-exclamation-triangle:before {
+  content: "\74";
+}
+.gr-eye-slash:before {
+  content: "\75";
+}
+.gr-photo:before {
+  content: "\76";
+}
+.gr-archive:before {
+  content: "\77";
+}
+.gr-brush:before {
+  content: "\78";
+}
+.gr-taille:before {
+  content: "\79";
+}
+.gr-font-1:before {
+  content: "\7a";
+}
+.gr-minraux:before {
+  content: "\41";
+}
+.gr-manichisme:before {
+  content: "\42";
+}
+.gr-magie:before {
+  content: "\43";
+}
+.gr-herbier:before {
+  content: "\44";
+}
+.gr-gangrne:before {
+  content: "\45";
+}
+.gr-carte:before {
+  content: "\46";
+}
+.gr-divinits:before {
+  content: "\47";
+}
+.gr-bestiaire:before {
+  content: "\48";
+}
+.gr-artefacts:before {
+  content: "\49";
+}
+.gr-astrologie:before {
+  content: "\4a";
+}
+.gr-titre:before {
+  content: "\4b";
+}
+.gr-question-circle:before {
+  content: "\4c";
+}
