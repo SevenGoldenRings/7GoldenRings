@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'fontello';
-  src: url('../font/fontello.eot?90764074');
-  src: url('../font/fontello.eot?90764074#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?90764074') format('woff2'),
-       url('../font/fontello.woff?90764074') format('woff'),
-       url('../font/fontello.ttf?90764074') format('truetype'),
-       url('../font/fontello.svg?90764074#fontello') format('svg');
+  font-family: 'goldenRings';
+  src: url('https://sevengoldenrings.github.io/7GoldenRings/font/font-7GR.eot');
+  src: url('https://sevengoldenrings.github.io/7GoldenRings/font/font-7GR.eot') format('embedded-opentype'),
+       url('https://sevengoldenrings.github.io/7GoldenRings/font/font-7GR.woff2') format('woff2'),
+       url('https://sevengoldenrings.github.io/7GoldenRings/font/font-7GRo.woff') format('woff'),
+       url('https://sevengoldenrings.github.io/7GoldenRings/font/font-7GR.ttf') format('truetype'),
+       url('https://sevengoldenrings.github.io/7GoldenRings/font/font-7GR.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,13 +14,13 @@
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: 'fontello';
+    font-family: 'goldenRings';
     src: url('../font/fontello.svg?90764074#fontello') format('svg');
   }
 }
 */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
+  font-family: "goldenRings";
   font-style: normal;
   font-weight: normal;
   speak: never;
