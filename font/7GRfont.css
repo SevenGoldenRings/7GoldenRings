@@ -36,6 +36,7 @@
 // EDITEUR
 .icon-bold:before { content: '\e822'; } /* '' */
 .icon-italic:before { content: '\e80f'; } /* '' */
+.icon-stroke:before { content: '\e806'; } /* '' */
 .icon-underline:before { content: '\e817'; } /* '' */
 
 .icon-left:before { content: '\e811'; } /* '' */
