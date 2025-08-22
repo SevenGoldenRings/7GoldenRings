@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: 'goldenRings';
   src: url('https://sevengoldenrings.github.io/7GoldenRings/font/font-7GR.eot');
@@ -15,43 +17,20 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'goldenRings';
-    src: url('../font/fontello.svg?90764074#fontello') format('svg');
+    src: url('https://sevengoldenrings.github.io/7GoldenRings/font/font-7GR.svg') format('svg');
   }
 }
 */
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "goldenRings";
-  font-style: normal;
-  font-weight: normal;
-  speak: never;
-
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
-
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
-
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-
-  /* Font smoothing. That was taken from TWBS */
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .icon-stroke:before { content: '\e806'; } /* '' */
@@ -78,5 +57,5 @@
 .icon-artefacts:before { content: '\e81b'; } /* '' */
 .icon-carte:before { content: '\e81c'; } /* '' */
 .icon-herbier:before { content: '\e81d'; } /* '' */
-.icon-minéraux:before { content: '\e81e'; } /* '' */
+.icon-mineraux:before { content: '\e81e'; } /* '' */
 .icon-bestiaire:before { content: '\e81f'; } /* '' */
