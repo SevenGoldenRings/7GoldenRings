@@ -33,29 +33,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-stroke:before { content: '\e806'; } /* '' */
-.icon-bold:before { content: '\e807'; } /* '' */
-.icon-center:before { content: '\e808'; } /* '' */
-.icon-code:before { content: '\e809'; } /* '' */
-.icon-color:before { content: '\e80a'; } /* '' */
-.icon-headline:before { content: '\e80b'; } /* '' */
-.icon-time:before { content: '\e80c'; } /* '' */
-.icon-hide:before { content: '\e80d'; } /* '' */
-.icon-img:before { content: '\e80e'; } /* '' */
+// EDITEUR
+.icon-bold:before { content: '\e822'; } /* '' */
 .icon-italic:before { content: '\e80f'; } /* '' */
-.icon-justify:before { content: '\e810'; } /* '' */
-.icon-left:before { content: '\e811'; } /* '' */
-.icon-link:before { content: '\e812'; } /* '' */
-.icon-quote:before { content: '\e813'; } /* '' */
-.icon-right:before { content: '\e814'; } /* '' */
-.icon-size:before { content: '\e815'; } /* '' */
-.icon-emote:before { content: '\e816'; } /* '' */
 .icon-underline:before { content: '\e817'; } /* '' */
+
+.icon-left:before { content: '\e811'; } /* '' */
+.icon-center:before { content: '\e808'; } /* '' */
+.icon-right:before { content: '\e814'; } /* '' */
+.icon-justify:before { content: '\e810'; } /* '' */
+
+.icon-quote:before { content: '\e813'; } /* '' */
+.icon-code:before { content: '\e809'; } /* '' */
 .icon-spoiler:before { content: '\e818'; } /* '' */
+.icon-hide:before { content: '\e821'; } /* '' */
+
 .icon-upload:before { content: '\e819'; } /* '' */
+.icon-img:before { content: '\e80e'; } /* '' */
+.icon-link:before { content: '\e812'; } /* '' */
 .icon-youtube:before { content: '\e81a'; } /* '' */
+
+.icon-headline:before { content: '\e80b'; } /* '' */
+.icon-size:before { content: '\e815'; } /* '' */
+.icon-color:before { content: '\e80a'; } /* '' */
+.icon-emote:before { content: '\e816'; } /* '' */
+.icon-time:before { content: '\e80c'; } /* '' */
+
+// ENCYCLOPEDIES
 .icon-artefacts:before { content: '\e81b'; } /* '' */
 .icon-carte:before { content: '\e81c'; } /* '' */
 .icon-herbier:before { content: '\e81d'; } /* '' */
 .icon-mineraux:before { content: '\e81e'; } /* '' */
 .icon-bestiaire:before { content: '\e81f'; } /* '' */
+
+// ROYAUMES
+.icon-vollheim:before { content: '\e829'; } /* '' */
+.icon-arvandor:before { content: '\e825'; } /* '' */
+.icon-xingalda:before { content: '\e82a'; } /* '' */
+.icon-cerah:before { content: '\e826'; } /* '' */
+.icon-almalaq:before { content: '\e823'; } /* '' */
+.icon-claranocte:before { content: '\e827'; } /* '' */
+.icon-ananda:before { content: '\e824'; } /* '' */
+.icon-nomades:before { content: '\e828'; } /* '' */
