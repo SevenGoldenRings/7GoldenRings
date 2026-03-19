@@ -30,11 +30,15 @@
   padding: 25px;
 }
 
+.chroniques-content p {
+  padding:0px;
+}
+
 .chroniques-bloc h1 {
   background: red;
   margin: 0px;
   padding: 0px;
-  font-family: var(--pirata);
+  font-family: "pirata one";
   font-weight: 400;
   padding: 20px 25px;
   background: #1c1c1f;
@@ -43,7 +47,7 @@
 }
 
 .chroniques-bloc h2 {
-  font-family: var(--pirata);
+  font-family: "pirata one";
   color: var(--red);
   margin: 0px;
   padding-left: 25px;
