@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
 
 :root {
-  --pirata: "Pirata One";}
+  --pirata: "Pirata One", system-ui;
+}
 
 /* désactiver les profils */
 .chroniques-msg .Mess_Profil_ID,
