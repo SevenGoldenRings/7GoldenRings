@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
 
-:root {
-  --pirata: "Pirata One", system-ui;
-}
-
 /* désactiver les profils */
 .chroniques-msg .Mess_Profil_ID,
 .chroniques-msg .m_Group {
@@ -40,7 +36,7 @@
   padding: 0px;
   font-family: "pirata one";
   font-weight: 400;
-  padding: 20px 25px;
+  padding: 40px 25px;
   background: #1c1c1f;
   color: #cedbe3;
   font-size: 48px;
