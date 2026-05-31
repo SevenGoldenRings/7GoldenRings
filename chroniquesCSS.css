@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
 
 /* désactiver les profils */
-.chroniques-msg .Mess_Profil_ID,
-.chroniques-msg .m_Group {
+.chroniques-msg .m_BlocAvatar {
   display: none;
 }
 
