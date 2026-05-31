@@ -30,15 +30,13 @@
 }
 
 .chroniques-bloc h1 {
-  background: red;
   margin: 0px;
   padding: 0px;
   font-family: "pirata one";
   font-weight: 400;
   padding: 40px 25px;
-  background: #1c1c1f;
-  color: #cedbe3;
-  font-size: 48px;
+  color: #1c1c1f;
+  font-size: 57px;
   display: none;
 }
 
